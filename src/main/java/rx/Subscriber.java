@@ -212,4 +212,13 @@ public abstract class Subscriber<T> implements Observer<T>, Subscription {
             }
         }
     }
+
+    /**
+     * onNext的扩展方法，当业务需要对请求进行个性化处理时，使用该方法
+     * @param t
+     * @return
+     */
+    public boolean isNext(T t){
+       return false;
+    }
 }
